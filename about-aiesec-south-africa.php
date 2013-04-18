@@ -28,59 +28,7 @@ require 'header.php';
 						<!-- start: Row -->
 						<div class="row">
 						
-							<!-- start: About Member -->
-							<div class="span3">
-								<img src="img/team_member.jpg" alt="team member">
-								<div class="team-name">Rahul Maria <span> / President</span></div>
-								<p>
-									He's a nice chap.
-								</p>
-								<div class="social_profiles">
-									<ul class="social-bookmarks">
-										<li class="facebook"><a href="https://www.facebook.com/rahul.maira">facebook</a></li>
-										<li class="googleplus"><a href="#">googleplus</a></li>
-										<li class="linkedin"><a href="#">linkedin</a></li>
-										<li class="twitter"><a href="#">twitter</a></li>
-									</ul>
-								</div>	
-							</div>
-							<!-- end: About Member -->
-
-							<!-- start: About Member -->
-							<div class="span3">
-								<img src="img/team_member.jpg" alt="team member">
-								<div class="team-name">Siddharth Bali <span> / MVCP OGX & OD</span></div>
-								<p>
-									He's also a nice chap.
-								</p>
-								<div class="social_profiles">
-									<ul class="social-bookmarks">
-										<li class="facebook"><a href="https://www.facebook.com/siddharth.bali.9">facebook</a></li>
-										<li class="googleplus"><a href="#">googleplus</a></li>
-										<li class="linkedin"><a href="#">linkedin</a></li>
-										<li class="twitter"><a href="#">twitter</a></li>
-									</ul>
-								</div>	
-							</div>
-							<!-- end: About Member -->	
-                            
-                            							<!-- start: About Member -->
-							<div class="span3">
-								<img src="img/team_member.jpg" alt="team member">
-								<div class="team-name">Alvin Morogo <span> / MCVP ICX</span></div>
-								<p>
-									He's also a nice chap.
-								</p>
-								<div class="social_profiles">
-									<ul class="social-bookmarks">
-										<li class="facebook"><a href="https://www.facebook.com/kippy.alvin">facebook</a></li>
-										<li class="googleplus"><a href="#">googleplus</a></li>
-										<li class="linkedin"><a href="#">linkedin</a></li>
-										<li class="twitter"><a href="#">twitter</a></li>
-									</ul>
-								</div>	
-							</div>
-							<!-- end: About Member -->	
+							
 						
 						</div>
 						<!-- end: Row -->
@@ -122,43 +70,12 @@ require 'header.php';
 
 						<!-- start: Testimonials-->
 
-						<div class="testimonial-container">
+						<?php
 
-							<div class="title"><h3>Testimonials</h3></div>
+						require 'testimonial.php';
 
-								<div class="testimonials-carousel" data-autorotate="3000">
+						?>
 
-									<ul class="carousel">
-
-										<li class="testimonial">
-											<div class="testimonials">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-											<div class="testimonials-bg"></div>
-											<div class="testimonials-author">Lucas Luck, <span>CEO</span></div>
-										</li>
-
-										<li class="testimonial">
-											<div class="testimonials">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-											<div class="testimonials-bg"></div>
-											<div class="testimonials-author">Lucas Luck, <span>CTO</span></div>
-										</li>
-
-										<li class="testimonial">
-											<div class="testimonials">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-											<div class="testimonials-bg"></div>
-											<div class="testimonials-author">Lucas Luck, <span>COO</span></div>
-										</li>
-
-										<li class="testimonial">
-											<div class="testimonials">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-											<div class="testimonials-bg"></div>
-											<div class="testimonials-author">Lucas Luck, <span>CMO</span></div>
-										</li>
-
-									</ul>
-
-								</div>
-
-							</div>
 
 						<!-- end: Testimonials-->
 

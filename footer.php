@@ -22,7 +22,7 @@
 
 						<ul id="footer-nav">
 							
-							<li><a href="">Contact</a></li>
+							<li><a href="contact.php">Contact</a></li>
 
 						</ul>
 
@@ -64,7 +64,7 @@
 					
 					<h3>About Us</h3>
 					<p>
-						AIESEC is the world's largest student run organization. 
+						Present in over 113 countries and territories and with over 86,000 members, AIESEC is the world's largest youth-run organisation. Focused on providing a platform for youth leadership development, AIESEC offers young people the opportunity to be global citizens, to change the world, and to get experience and skills that matter today.
 					</p>
 						
 				</div>
@@ -92,10 +92,10 @@
 								<div class="social-info-wrap">
 									<div class="social-info">
 										<div class="social-info-front social-twitter">
-											<a href="http://twitter.com"></a>
+											<a href="https://twitter.com/AIESECSAfrica"></a>
 										</div>
 										<div class="social-info-back social-twitter-hover">
-											<a href="http://twitter.com"></a>
+											<a href="https://twitter.com/AIESECSAfrica"></a>
 										</div>	
 									</div>
 								</div>
@@ -106,39 +106,11 @@
 								<div class="social-info-wrap">
 									<div class="social-info">
 										<div class="social-info-front social-facebook">
-											<a href="http://facebook.com"></a>
+											<a href="https://www.facebook.com/AIESECinSouthAfrica"></a>
 										</div>
 										<div class="social-info-back social-facebook-hover">
-											<a href="http://facebook.com"></a>
+											<a href="https://www.facebook.com/AIESECinSouthAfrica"></a>
 										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="social-item">				
-								<div class="social-info-wrap">
-									<div class="social-info">
-										<div class="social-info-front social-dribbble">
-											<a href="http://dribbble.com"></a>
-										</div>
-										<div class="social-info-back social-dribbble-hover">
-											<a href="http://dribbble.com"></a>
-										</div>	
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="social-item">				
-								<div class="social-info-wrap">
-									<div class="social-info">
-										<div class="social-info-front social-flickr">
-											<a href="http://flickr.com"></a>
-										</div>
-										<div class="social-info-back social-flickr-hover">
-											<a href="http://flickr.com"></a>
-										</div>	
 									</div>
 								</div>
 							</div>
@@ -187,6 +159,7 @@
 
 <!-- start: Java Script -->
 <!-- Placed at the end of the document so the pages load faster -->
+
 <script src="js/jquery-1.8.2.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/isotope.js"></script>
@@ -197,6 +170,19 @@
 <script src="js/slider.js"></script>
 <script src="js/fancybox.js"></script>
 <script defer src="js/custom.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37861805-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 <!-- end: Java Script -->
 
 </body>

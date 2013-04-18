@@ -1,3 +1,31 @@
+/* ------------------- Flex Slider --------------------- */
+
+jQuery(document).ready(function($){
+	
+	$('#flex1').flexslider();
+
+
+	$('#flex2').flexslider({
+	 	animation: "slide",
+	   	controlNav: "thumbnails"
+	});
+	
+	$('.clients-carousel').flexslider({
+	    animation: "slide",
+		easing: "swing",
+	    animationLoop: true,
+	    itemWidth: 1,
+	    itemMargin: 1,
+	    minItems: 1,
+	    maxItems: 8,
+		controlNav: false,
+		directionNav: false,
+		move: 2
+      });
+
+});
+
+
 jQuery(document).ready(function($){
 	
 	/* ------------------- Fancybox --------------------- */
@@ -33,22 +61,6 @@ jQuery(document).ready(function($){
 	})();
 	
 	
-	/* ------------------- Client Carousel --------------------- */
-
-	$('.clients-carousel').flexslider({
-	    animation: "slide",
-		easing: "swing",
-	    animationLoop: true,
-	    itemWidth: 1,
-	    itemMargin: 1,
-	    minItems: 1,
-	    maxItems: 8,
-		controlNav: false,
-		directionNav: false,
-		move: 2
-      });
-
-
 	/* ------------------ Back To Top ------------------- */
 
 	jQuery('#footer-menu-back-to-top a').click(function(){
@@ -128,7 +140,7 @@ jQuery(document).ready(function($){
 
 /* ------------------ Image Overlay ----------------- */
 
-jQuery(document).ready(function () {
+jQuery(document).ready(function($) {
 	
 	$('.picture a').hover(function () {
 		$(this).find('.image-overlay-zoom, .image-overlay-link').stop().fadeTo('fast', 1);
@@ -140,9 +152,9 @@ jQuery(document).ready(function () {
 
 /* -------------------- Isotope --------------------- */
 
-jQuery(document).ready(function (){
+jQuery(document).ready(function($) {
 	
-	$('#portfolio-wrapper').imagesLoaded(function(){
+	$('#portfolio-wrapper').imagesLoaded(function() {
 		
 		var $container = $('#portfolio-wrapper');
 			$select = $('#filters select');

@@ -112,6 +112,7 @@ $message = 'I am an AIESECer!';
 				}
 				  }
 				?>
+
             <h4>Problems?</h4>
             
             Feel free to send me an <a href="mailto:michael.victor@aiesec.net?Subject=Case%20Study%20Generator">email</a>!

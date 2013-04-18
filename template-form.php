@@ -53,8 +53,14 @@
     Recomended Size : 800 X 550 px width.<br><br>
     <label>First name : </label><input type="text" placeholder="Enter your first name here" name="first_name">
     <label>Last name : </label><input type="text" placeholder="Enter your last name here" name="last_name">
-    <label>Position : </label><input type="text" placeholder="Enter your position here" name="position" id="position">
+    <label>Position : </label><input type="text" placeholder="Enter your position here / If you are an Intern, type - Intern" name="position" id="position">
     <label>LC Name : </label><input type="text" placeholder="Enter your LC name here" name="lc_name">
+    <label>Type of Association : </label>
+    <select name="assoc" required>
+                              <option value="Alumni">Alumni</option>
+                              <option value="Member">Member</option>
+                              <option value="Intern">Intern</option>
+                          </select>
     <label>Age : </label><input type="text" placeholder="Enter your age here" name="age"> years
     <label>Text : </label><textarea id="text_field" rows="4" name="text_field" ></textarea><div id="charNum">​</div>
     <br><button type="submit" class="btn">Submit</button>

@@ -87,43 +87,11 @@ global internship program.
 
 						<!-- start: Testimonials-->
 
-						<div class="testimonial-container">
+						<?php
 
-							<div class="title"><h3>Testimonials</h3></div>
+						require 'testimonial.php';
 
-								<div class="testimonials-carousel" data-autorotate="3000">
-
-									<ul class="carousel">
-
-										<li class="testimonial">
-											<div class="testimonials">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-											<div class="testimonials-bg"></div>
-											<div class="testimonials-author">Lucas Luck, <span>CEO</span></div>
-										</li>
-
-										<li class="testimonial">
-											<div class="testimonials">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-											<div class="testimonials-bg"></div>
-											<div class="testimonials-author">Lucas Luck, <span>CTO</span></div>
-										</li>
-
-										<li class="testimonial">
-											<div class="testimonials">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-											<div class="testimonials-bg"></div>
-											<div class="testimonials-author">Lucas Luck, <span>COO</span></div>
-										</li>
-
-										<li class="testimonial">
-											<div class="testimonials">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-											<div class="testimonials-bg"></div>
-											<div class="testimonials-author">Lucas Luck, <span>CMO</span></div>
-										</li>
-
-									</ul>
-
-								</div>
-
-							</div>
+					?>
 
 						<!-- end: Testimonials-->
 

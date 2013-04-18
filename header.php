@@ -6,6 +6,7 @@ $current_page =  $parts[count($parts) - 1];
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 <?php
 $title = 'AIESEC South Africa';
 if($current_page == 'about-aiesec.php')
@@ -16,9 +17,25 @@ else if($current_page == 'about-aiesec-south-africa.php')
 {
 	$title = "About AIESEC South Africa";	
 }
+else if($current_page == 'gcdp_ep_contract.php')
+{
+	$title = "Exchange Participant Contract";	
+}
+else if($current_page == 'gcdp_ep_submit_details.php')
+{
+	$title = "Exchange Participant Registration";	
+}
+else if($current_page == 'join-aiesec.php')
+{
+	$title = "Join AIESEC";
+}
+else if($current_page == 'contact.php')
+{
+	$title = "Contact Us";
+}
 
 ?>
-	<title><? echo $title ?></title> 
+	<title><?php echo $title ?></title> 
 	<meta name="description" content="Smart Bootstrap Theme"/>
 	<meta name="keywords" content="Template, Theme, web, html5, css3, Bootstrap" />
 	<meta name="author" content="Łukasz Holeczek from creativeLabs"/>
@@ -83,17 +100,16 @@ else if($current_page == 'about-aiesec-south-africa.php')
 			          		</a>
 			          		<div class="nav-collapse collapse">
 			            		<ul class="nav">
-			              			<li<? if($current_page == 'index.html'){echo 'class="active"';} ?>><a href="index.html">Home</a></li>
-                                    <li<? if($current_page == 'about-aiesec.php' || $current_page == 'about-aiesec-southafrica.php'){echo 'class="active dropdown"'; } ?>>
+			              			<li <?php if($current_page == 'index.php'){echo 'class="active"';} ?>><a href="index.php">Home</a></li>
+                                    <li <?php if($current_page == 'about-aiesec.php' || $current_page == 'about-aiesec-southafrica.php'){echo 'class="active dropdown"'; } ?>>
 			                			<a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
 			                			<ul class="dropdown-menu">
 											<li><a href="about-aiesec.php">About AIESEC</a></li>
                                             <li><a href="about-aiesec-south-africa.php">About AIESEC South Africa</a></li>
 			                			</ul>
 			              			</li>							
-									<li><a href="">Alumni</a></li>
-									<li><a href="">Blog</a></li>
-			              			<li><a href="">Contact</a></li>
+			              			<li <?php if($current_page == 'join-aiesec.php'){echo 'class="active"';} ?>><a href="join-aiesec.php">Join AIESEC</a></li>
+			              			<li <?php if($current_page == 'contact.php'){echo 'class="active"';} ?>><a href="contact.php">Contact Us</a></li>
 			            		</ul>
 			          		</div>
 			        	</div>
@@ -103,6 +119,8 @@ else if($current_page == 'about-aiesec-south-africa.php')
 				<!--end: Navigation -->
 					
 			</div>
+		</div>
+	</div>
 			<!--end: Row -->
 			
 		</div>
@@ -119,7 +137,7 @@ else if($current_page == 'about-aiesec-south-africa.php')
 			<!-- start: Container -->
 			<div class="container">
 
-				<h2><i class="ico-stats ico-white"></i>About Us</h2>
+				<h2><i class="ico-stats ico-white"></i><?php echo $title ?></h2>
 
 			</div>
 			<!-- end: Container  -->

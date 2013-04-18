@@ -1,0 +1,14 @@
+
+RewriteEngine on
+
+RewriteOptions inherit
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ceed$ "http\:\/\/goo\.gl\/sqMJd" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^case\-study$ "http\:\/\/aiesec\.co\.za\/template\-form\.php" [R=301,L]
+
+Options +Indexes
+IndexOptions +FancyIndexing
+
