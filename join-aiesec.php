@@ -16,7 +16,7 @@ require 'header.php';
 				<div class="span9">
 					
 					<div id="about">
-                    	<div class="title"><h3>Join AIESEC</h3></div>
+                    	<div class="title"><h3>Sign up to work abroad</h3></div>
                     	<p>Thank you for your interest in joining AIESEC. Providing the following information will allow your local AIESEC office to get in touch with you and provide you with the details of their local recruiting process.</p>
                     </div>
 
