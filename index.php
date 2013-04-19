@@ -113,7 +113,7 @@
 							<div class="slide-caption hidden-phone">
 								<h3>Go on an International Exchange to Brazil</h3>
 								<p>
-									Go on an international experience powered by AIESEC. Click <a href="join-aiesec.php">here</a> to get in touch with us!
+									Go on an international experience powered by AIESEC. Click <a href="work-abroad.php">here</a> to get in touch with us!
 								</p>
 							</div>
 						</li>
@@ -124,7 +124,7 @@
 							<div class="slide-caption hidden-phone">
 								<h3>Go on an International Exchange to India</h3>
 								<p>
-									Go on an international experience powered by AIESEC. Click <a href="join-aiesec.php">here</a> to get in touch with us!
+									Go on an international experience powered by AIESEC. Click <a href="work-abroad.php">here</a> to get in touch with us!
 								</p>
 							</div>
 						</li>
@@ -134,7 +134,7 @@
 							<div class="slide-caption hiden-phone">
 								<h3>Go on an International Exchange to Kenya</h3>
 								<p>
-									Go on an international experience powered by AIESEC. Click <a href="join-aiesec.php">here</a> to get in touch with us!
+									Go on an international experience powered by AIESEC. Click <a href="work-abroad.php">here</a> to get in touch with us!
 								</p>
 							</div>
 						</li>
@@ -144,7 +144,7 @@
 							<div class="slide-caption hidden-phone">
 								<h3>Go on an International Exchange to Mauritius</h3>
 								<p>
-									Go on an international experience powered by AIESEC. Click <a href="join-aiesec.php">here</a> to get in touch with us!
+									Go on an international experience powered by AIESEC. Click <a href="work-abroad.php">here</a> to get in touch with us!
 								</p>
 							</div>
 						</li>
