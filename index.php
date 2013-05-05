@@ -98,14 +98,13 @@
 	<!--end: Header-->
 
 	<div class="container">
-	
 	<!-- start: Slider -->
-	<div class="slider-wrapper">
+	<div class="slider-wrappers">
 
 		<!-- start: Flexslider -->
 			<div class="slider">
 			
-				<div id="flex1" class="flexslider">
+				<div id="flex1" class="flexslider span9">
 					<ul class="slides">
 
 						<li>
@@ -113,7 +112,7 @@
 							<div class="slide-caption hidden-phone">
 								<h3>Go on an International Exchange to Brazil</h3>
 								<p>
-									Go on an international experience powered by AIESEC. Click <a href="work-abroad.php">here</a> to get in touch with us!
+									Go on an international experience powered by AIESEC. Click <a href="work-abroad.php">here</a> to get in touch with us! 
 								</p>
 							</div>
 						</li>
@@ -149,16 +148,39 @@
 							</div>
 						</li>
 
+						<li>
+							<img src="img/sliders/slider8.jpg" alt="" />
+							<div class="slide-caption hidden-phone">
+								<h3>Go on an International Exchange to Egypt</h3>
+								<p>
+									Go on an international experience powered by AIESEC. Click <a href="work-abroad.php">here</a> to get in touch with us! <br />
+									<a href="https://www.dropbox.com/sh/0pcncgg384eihqq/0zXDpOlTaC" target="_blank">View</a> Promotional Pack.
+								</p>
+							</div>
+						</li>
+
 					</ul>
 				</div>
+				<div class="span3">
+					
+					<!-- start: Testimonials-->
+
+					<?php
+
+						require 'testimonial.php';
+
+					?>
+
+					<!-- end: Testimonials-->
+					
+        		</div>
 			
 			</div>
 			<!-- end: Flexslider -->
 		</div>	
 		
-	</div>
 	<!-- end: Slider -->
-			
+	</div>		
 	<!--start: Wrapper-->
 	<div id="wrapper">
 				
@@ -291,19 +313,7 @@ Cultural education, HIV/AIDs, community development or corporate social responsi
 
 				</div>
 
-        		<div class="span3">
-					
-					<!-- start: Testimonials-->
 
-					<?php
-
-						require 'testimonial.php';
-
-					?>
-
-					<!-- end: Testimonials-->
-					
-        		</div>
 
       		</div>
 			<!-- end: Row -->

@@ -1,0 +1,373 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"match",
+				"match_on_system"
+			],
+			[
+				"mat",
+				"match_on_system"
+			],
+			[
+				"tn",
+				"tn_country"
+			],
+			[
+				"fil",
+				"file"
+			],
+			[
+				"file",
+				"filelocation"
+			],
+			[
+				"E",
+				"Ext"
+			],
+			[
+				"fi",
+				"file"
+			],
+			[
+				"inter",
+				"intern-type"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/F/xampp/htdocs/usa/aieseconline2/templates/ap_step8.tpl",
+			"settings":
+			{
+				"buffer_size": 10351,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\n<link rel=\"stylesheet\" title=\"Style CSS\" href=\"/calendar/cwcalendar.css\" type=\"text/css\" media=\"all\" />\n<script type=\"text/javascript\">\n  var monthFormat = \"mm\";\n  var yearFormat = \"yyyy\";\n  var itype = \"strict\";\n  var imaxDays = 10068;\n  var now = new Date();\n  var startDay = now.getDate();\n  var startMonth = now.getMonth();\n  var startYear = now.getFullYear();\n  var iDay = startDay;\n  var iYear = startYear;\n  var iMonth = startMonth;\n  var formatSplitter = ' - ';\n</script>\n<script type=\"text/javascript\" src=\"/calendar/calendar.js\"></script>\n\n<h1>Dates & Preferences</h1>\n	<form method=\"post\" action=\"/index.php?p=ap_steps\" >\n		<input type=\"hidden\" name=\"current_step\" value=\"8\" />\n       <p style=\"text-align:justify;\">Please choose your desired start date, end date, and duration of the traineeship you want. Be aware the more flexible your dates are the more likely you will be to find the best traineeship/internship for yourself.</p>\n      <table border=0 cellpadding=\"0\" cellspacing=\"2\">\n        <tr>\n			<td colspan=2><b>Start/End dates:</b><br />\n       			<input name=\"dates_required\" value=\"0\" id=\"dates_required\" type=\"radio\" {if $dates_required == 0}CHECKED{/if} /> Preferred  			&nbsp;&nbsp;\n				<input name=\"dates_required\" value=\"1\" id=\"dates_required\" type=\"radio\" {if $dates_required == 1}CHECKED{/if} /> Required</td>\n        </tr>\n        <tr>\n	        <td colspan=2>Earliest start date: <input type=\"text\" size=\"16\" name=\"start_date\" id=\"start_date\" value=\"{$start_date}\" onclick='fPopCalendar(\"start_date\")' /></td>\n         </tr>\n         <tr>\n   	        <td colspan=2>Latest end date: <input type=\"text\" size=\"16\" name=\"end_date\" id=\"end_date\" value=\"{$end_date}\" onclick='fPopCalendar(\"end_date\")' /></td>\n	    </tr>\n         <tr>\n			<td colspan=2>&nbsp;</td>\n            \n        </tr>\n        <tr>\n			<td colspan=2><b>Duration:</b><br />\n	        	<input name=\"duration_required\" value=\"0\" id=\"duration_required\" type=\"radio\" {if $duration_required == 0}CHECKED{/if} /> Preferred  			&nbsp;&nbsp;\n				<input name=\"duration_required\" value=\"1\" id=\"duration_required\" type=\"radio\" {if $duration_required == 1}CHECKED{/if} /> Required\n          </td>\n        </tr>\n         <tr>\n	        <td>Minimum Weeks (6-78): <select name=\"min_duration\" >{html_options values=$durations output=$durations selected=$min_duration}</select></td>\n   	        <td>Maximum Weeks (6-78): <select name=\"max_duration\" >{html_options values=$durations output=$durations selected=$max_duration}</select></td>\n        <tr>\n        </table>\n      <br />\n\n      {if $user_id lt $user_version_limit}\n\n      <table cellspacing=\"0\" cellpadding=\"0\">\n        <tr>\n            <td><strong>Learning Networks</strong></td>\n        </tr>\n          <tr>\n            <td colspan=\"3\" width=\"100%\"><table width=\"100%\">\n              <tbody>\n                <tr>\n                  <td colspan=\"3\">Please select the learning networks in which you wish to do the internship.</td>\n                </tr>\n                <tr>\n                  <td>&nbsp;</td>\n                </tr>\n                <tr>\n                  <td width=\"50%\"><input name=\"learningnw[]\" value=\"1\" {if $data.1 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Corporate Responsibility </td>\n                  <td width=\"50%\"><input name=\"learningnw[]\" value=\"2\" {if $data.2 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          HIV/AIDS </td>\n                </tr>\n                <tr>\n                  <td width=\"50%\"><input name=\"learningnw[]\" value=\"3\" {if $data.3 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Finance </td>\n                  <td width=\"50%\"><input name=\"learningnw[]\" value=\"4\" {if $data.4 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Education </td>\n                </tr>\n                <tr>\n                  <td width=\"50%\"><input name=\"learningnw[]\" value=\"5\" {if $data.5 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Energy </td>\n                  <td width=\"50%\"><input name=\"learningnw[]\" value=\"6\" {if $data.6 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          No Particular Learning Network </td>\n                </tr>\n                <tr>\n                  <td width=\"50%\"><input name=\"learningnw[]\" value=\"7\" {if $data.7 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Entrepreneurship </td>\n                </tr>\n              </tbody>\n            </table></td>\n          </tr>\n      </table>\n      {else}\n      <br />\n        <table cellspacing=\"0\" cellpadding=\"0\">\n        <tr>\n            <td><strong>I would like to go to..</strong></td>\n        </tr>\n          <tr>\n            <td colspan=\"3\" width=\"100%\"><table width=\"100%\">\n              <tbody>\n                <tr>\n                  <td width=\"50%\"><input name=\"preferred_regions[]\" value=\"1\" {if $datapr.1 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Asia Pacific</td>\n                  <td width=\"50%\"><input name=\"preferred_regions[]\" value=\"2\" {if $datapr.2 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Central and Eastern Europe</td>\n                </tr>\n                <tr>\n                  <td width=\"50%\"><input name=\"preferred_regions[]\" value=\"3\" {if $datapr.3 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Latin America (Iberoamerica)</td>\n                  <td width=\"50%\"><input name=\"preferred_regions[]\" value=\"4\" {if $datapr.4 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;           Middle East and North Africa</td>\n                </tr>\n                <tr>\n                  <td width=\"50%\"><input name=\"preferred_regions[]\" value=\"5\" {if $datapr.5 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Sub-saharan Africa</td>\n                  <td width=\"50%\"><input name=\"preferred_regions[]\" value=\"6\" {if $datapr.6 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Western Europe</td>\n                </tr>\n                 <tr>\n                  <td colspan=\"3\">Note: It will take 3 to 12 months to find an available opportunity for you in Western Europe, due to the extreme competitiveness of opportunities in AIESEC in this region.</td>\n                </tr>\n              </tbody>\n            </table></td>\n          </tr>\n      </table>\n      <br />\n        <table cellspacing=\"0\" cellpadding=\"0\">\n        <tr>\n            <td><strong>I would like to work in..</strong></td>\n        </tr>\n          <tr>\n            <td colspan=\"3\" width=\"100%\"><table width=\"100%\">\n              <tbody>\n                <tr>\n                  <td width=\"50%\"><input name=\"work_type[]\" value=\"1\" {if $datawt.1 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Volunteering (Mostly 6 to 8 weeks)</td>\n                  <td width=\"50%\"><input name=\"work_type[]\" value=\"2\" {if $datawt.2 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Education (Mostly 6 to 10 weeks)</td>\n                </tr>\n                <tr>\n                  <td width=\"50%\"><input name=\"work_type[]\" value=\"3\" {if $datawt.3 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;           Business (Varies from 12 to 56 weeks, depending on the countries and work fields)</td>\n                  <td width=\"50%\"><input name=\"work_type[]\" value=\"4\" {if $datawt.4 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;           Informational Technology or Engineering (All 48 to 72 weeks)</td>\n                </tr>\n              </tbody>\n            </table></td>\n          </tr>\n      </table>\n      <br />\n       <table cellspacing=\"0\" cellpadding=\"0\">\n        <tr>\n            <td><strong>Are you interested in any of the following countries and programs during 2013 summer?</strong></td>\n        </tr>\n          <tr>\n            <td colspan=\"3\" width=\"100%\"><table width=\"100%\">\n              <tbody>\n                <tr>\n                  <td width=\"50%\"><input name=\"preferred_countries[]\" value=\"1\" {if $datapc.1 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Brazil (Volunteering or teaching English)</td>\n                  <td width=\"50%\"><input name=\"preferred_countries[]\" value=\"2\" {if $datapc.2 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Colombia (Volunteering)</td>\n                </tr>\n                <tr>\n                  <td width=\"50%\"><input name=\"preferred_countries[]\" value=\"3\" {if $datapc.3 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          China (Volunteering or teaching English)</td>\n                  <td width=\"50%\"><input name=\"preferred_countries[]\" value=\"4\" {if $datapc.4 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;           Egypt (Volunteering)</td>\n                </tr>\n                <tr>\n                  <td width=\"50%\"><input name=\"preferred_countries[]\" value=\"5\" {if $datapc.5 == 1}CHECKED{/if} type=\"checkbox\" />\n                    &nbsp;&nbsp;          Hungary (Volunteering)</td>\n                  <td width=\"50%\">Other : <input name=\"country_other\" value=\"{$country_other}\" type=\"text\" /></td>\n                </tr>\n                 <tr>\n                  <td colspan=\"3\">Note: Colombia, Brazil, China, Hungary and Egypt are the partner countries of AIESEC United States. They have more opportunities for students of the US, besides, it will be faster and more likely to confirm an opportunity for you if you want to go to any of these countries. </td>\n                </tr>\n              </tbody>\n              \n            </table></td>\n          </tr>\n      </table>\n      {/if}\n      <p><input type=\"submit\" value=\"Save & Continue\"  class=submit /></p>\n</form>",
+			"file": "/F/xampp/htdocs/usa/templates/ap_step8.tpl",
+			"file_size": 10133,
+			"file_write_time": 130109045713562599,
+			"settings":
+			{
+				"buffer_size": 9964,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n	require_once(\"smarty_connect.php\");\n	$smarty = new smarty_connect;\n	require_once(\"inc/ausdb.php\"); aus_dbinit();\n	\n	// Exchange Type\n	$x_query = mysql_query(\"SELECT tn_type, type_name FROM tn_types ORDER BY tn_type ASC\");\n	$x_type[0] = '';\n	while ($linha = mysql_fetch_array($x_query)) $x_type[$linha['tn_type']] = $linha['type_name'];\n	\n	// Weeks\n	$weeks[0] = '';\n	$start = 6;\n	while ($start <= 78) {\n		$weeks[$start] = $start;\n		$start = $start + 1;\n	}\n	\n	// Local Committees\n	$lc_query = mysql_query(\"SELECT id, name FROM lc WHERE active = 1 ORDER BY name ASC\");\n	$lc[0] = '';\n	while ($linha = mysql_fetch_array($lc_query)) $lc[$linha['id']] = $linha['name'];\n	\n	// Languages\n	$langs = array('','Arabic','Armenian','Bahasa Indonesian','Bahasa Malaysia','Bulgarian','Cantonese','Czech','Danish','Dutch','English','Estonian','Farsi','Finnish','French','Georgian','German','Greek','Hebrew','Hindi','Hungarian','Icelandic','Irish','Italian','Japanese','Kiswahili','Korean','Latvian','Lithuanian','Macedonian','Mandarin','Mengrelian','Norwegian','Polish','Portuguese','Romanian','Russian','Setswana','Slavic (Bosnian, Serbian, Croatian)','Slovak','Slovenian','Spanish','Swedish','Thai','Turkish','Ukrainian','Urdu','Vietnamese','Welsh');\n	\n	// Regions\n	$regions = array(\n			'0' => 'World',\n			'A' => 'Africa',\n			'AP' => 'Asia Pacific',\n			'CEE' => 'CEE',\n			'IB' => 'Iberoamerica',\n			'MENA' => 'MENA',\n			'WENA' => 'WENA'\n	);\n\n	//Countries\n	$country_list = array(\n		\"Afghanistan\",\n		\"Albania\",\n		\"Algeria\",\n		\"Andorra\",\n		\"Angola\",\n		\"Antigua and Barbuda\",\n		\"Argentina\",\n		\"Armenia\",\n		\"Australia\",\n		\"Austria\",\n		\"Azerbaijan\",\n		\"Bahamas\",\n		\"Bahrain\",\n		\"Bangladesh\",\n		\"Barbados\",\n		\"Belarus\",\n		\"Belgium\",\n		\"Belize\",\n		\"Benin\",\n		\"Bhutan\",\n		\"Bolivia\",\n		\"Bosnia and Herzegovina\",\n		\"Botswana\",\n		\"Brazil\",\n		\"Brunei\",\n		\"Bulgaria\",\n		\"Burkina Faso\",\n		\"Burundi\",\n		\"Cambodia\",\n		\"Cameroon\",\n		\"Canada\",\n		\"Cape Verde\",\n		\"Central African Republic\",\n		\"Chad\",\n		\"Chile\",\n		\"China\",\n		\"Colombia\",\n		\"Comoros\",\n		\"Congo (Brazzaville)\",\n		\"Congo\",\n		\"Costa Rica\",\n		\"Cote d'Ivoire\",\n		\"Croatia\",\n		\"Cuba\",\n		\"Cyprus\",\n		\"Czech Republic\",\n		\"Denmark\",\n		\"Djibouti\",\n		\"Dominica\",\n		\"Dominican Republic\",\n		\"East Timor (Timor Timur)\",\n		\"Ecuador\",\n		\"Egypt\",\n		\"El Salvador\",\n		\"Equatorial Guinea\",\n		\"Eritrea\",\n		\"Estonia\",\n		\"Ethiopia\",\n		\"Fiji\",\n		\"Finland\",\n		\"France\",\n		\"Gabon\",\n		\"Gambia, The\",\n		\"Georgia\",\n		\"Germany\",\n		\"Ghana\",\n		\"Greece\",\n		\"Grenada\",\n		\"Guatemala\",\n		\"Guinea\",\n		\"Guinea-Bissau\",\n		\"Guyana\",\n		\"Haiti\",\n		\"Honduras\",\n		\"Hungary\",\n		\"Iceland\",\n		\"India\",\n		\"Indonesia\",\n		\"Iran\",\n		\"Iraq\",\n		\"Ireland\",\n		\"Israel\",\n		\"Italy\",\n		\"Jamaica\",\n		\"Japan\",\n		\"Jordan\",\n		\"Kazakhstan\",\n		\"Kenya\",\n		\"Kiribati\",\n		\"Korea, North\",\n		\"Korea, South\",\n		\"Kuwait\",\n		\"Kyrgyzstan\",\n		\"Laos\",\n		\"Latvia\",\n		\"Lebanon\",\n		\"Lesotho\",\n		\"Liberia\",\n		\"Libya\",\n		\"Liechtenstein\",\n		\"Lithuania\",\n		\"Luxembourg\",\n		\"Macedonia\",\n		\"Madagascar\",\n		\"Malawi\",\n		\"Malaysia\",\n		\"Maldives\",\n		\"Mali\",\n		\"Malta\",\n		\"Marshall Islands\",\n		\"Mauritania\",\n		\"Mauritius\",\n		\"Mexico\",\n		\"Micronesia\",\n		\"Moldova\",\n		\"Monaco\",\n		\"Mongolia\",\n		\"Morocco\",\n		\"Mozambique\",\n		\"Myanmar\",\n		\"Namibia\",\n		\"Nauru\",\n		\"Nepal\",\n		\"Netherlands\",\n		\"New Zealand\",\n		\"Nicaragua\",\n		\"Niger\",\n		\"Nigeria\",\n		\"Norway\",\n		\"Oman\",\n		\"Pakistan\",\n		\"Palau\",\n		\"Panama\",\n		\"Papua New Guinea\",\n		\"Paraguay\",\n		\"Peru\",\n		\"Philippines\",\n		\"Poland\",\n		\"Portugal\",\n		\"Qatar\",\n		\"Romania\",\n		\"Russia\",\n		\"Rwanda\",\n		\"Saint Kitts and Nevis\",\n		\"Saint Lucia\",\n		\"Saint Vincent\",\n		\"Samoa\",\n		\"San Marino\",\n		\"Sao Tome and Principe\",\n		\"Saudi Arabia\",\n		\"Senegal\",\n		\"Serbia and Montenegro\",\n		\"Seychelles\",\n		\"Sierra Leone\",\n		\"Singapore\",\n		\"Slovakia\",\n		\"Slovenia\",\n		\"Solomon Islands\",\n		\"Somalia\",\n		\"South Africa\",\n		\"Spain\",\n		\"Sri Lanka\",\n		\"Sudan\",\n		\"Suriname\",\n		\"Swaziland\",\n		\"Sweden\",\n		\"Switzerland\",\n		\"Syria\",\n		\"Taiwan\",\n		\"Tajikistan\",\n		\"Tanzania\",\n		\"Thailand\",\n		\"Togo\",\n		\"Tonga\",\n		\"Trinidad and Tobago\",\n		\"Tunisia\",\n		\"Turkey\",\n		\"Turkmenistan\",\n		\"Tuvalu\",\n		\"Uganda\",\n		\"Ukraine\",\n		\"United Arab Emirates\",\n		\"United Kingdom\",\n		\"United States\",\n		\"Uruguay\",\n		\"Uzbekistan\",\n		\"Vanuatu\",\n		\"Vatican City\",\n		\"Venezuela\",\n		\"Vietnam\",\n		\"Yemen\",\n		\"Zambia\",\n		\"Zimbabwe\"\n	);\n	\n	$smarty->assign('regions',$regions);\n	$smarty->assign('countries', $country_list);\n	$smarty->assign('x_type',$x_type);\n	$smarty->assign('weeks',$weeks);\n	$smarty->assign('lc',$lc);\n	$smarty->assign('langs',$langs);\n?>\n<html>\n<head>\n<title>AIESEC US - Search Tool</title>\n<link rel=\"stylesheet\" href=\"jquery.modal.css\" type=\"text/css\" media=\"screen\" />\n<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js\"></script>\n<script src=\"jquery.modal.js\"></script>\n<style type=\"text/css\" media=\"screen\"> \nbody {\n	color:#000;\n	font-family:\"Helvetica Neue\", Arial, Helvetica, sans-serif;\n}\na {\n	color:#000;\n	font-style:italic;\n}\n\n#table {\n	margin-top:55px;\n}\n\n#table td {\n	border-bottom: 1px solid #CCC;\n	padding:3px;\n}\n\n#search {\n	position:fixed;\n	top:0px;\n	left:0px;\n	\n	width:100%;\n	height:50px;\n	\n	border-top: 3px solid #12489E;\n	background: url(images/back-search.png) repeat-x;\n	border-bottom: 1px solid #999;\n	padding:0px;\n}\n\n#loading {\n	z-index: 999;\n	position: fixed;\n	top: 50%;\n	left: 50%;\n}\n</style> \n</head>\n<body topmargin=\"0\" leftmargin=\"0\">\n<div id=\"loading\">\n<img src=\"https://exchange.aiesecus.org/images/loading.gif\">\n</div>\n<?php $smarty->display('searchtool-search.tpl'); ?>\n<div id=\"table\"></div>\n<script type=\"text/javascript\">\nfunction loadtable() {\n	$.post(\"searchtool-load.php\", { exchange_type: $('select[name=\"type\"]').val(), min_weeks: $('select[name=\"min_weeks\"]').val(), max_weeks: $('select[name=\"max_weeks\"]').val(), lc: $('select[name=\"lc\"]').val(), langs: $('select[name=\"langs\"]').val(), regions: $('select[name=\"regions\"]').val(), countries: $('select[name=\"countries\"]').val() },\n	function(data) {\n		$(\"#table\").empty().append(data);\n	});\n}\n\n$(\"select\").change(function() {\n	$(\"#table\").empty();\n	loadtable();\n});\n\n$(document).ready(function() {\n	$('#loading')\n    .ajaxStart(function() {\n        $(this).show();\n    })\n    .ajaxStop(function() {\n        $(this).hide();\n    });\n	loadtable();\n	$(\"#bulkdownload\").submit(function(){\n		$.post('inc/bulkdownload.php', $(\"#bulkdownload\").serialize(), function(data){\n			$(\"#result\").html(data);\n		});\n\n		return false;\n	});\n});\n</script>\n  <div id=\"ex1\" style=\"display:none;\">\n    <form id=\"bulkdownload\">\n    	<label>Type of Internship : </label>\n    	<select name=\"intern-type\" required>\n    	  <option value=\"All\">All</option>\n          <option value=\"DT\">Development Traineeship</option>\n          <option value=\"MT\">Management Traineeship</option>\n          <option value=\"TT\">Technical Traineeship</option>\n          <option value=\"ET\">Educational Traineeship</option>\n        </select>\n        <br>\n\n        <input type=\"submit\" value=\"Prepare Download Package\">\n        <br>\n        <div id=\"result\">\n        \n    	</div>\n    </form>\n  </div>\n</body>\n</html>",
+			"file": "/F/xampp/htdocs/usa/searchtool.php",
+			"file_size": 7372,
+			"file_write_time": 130110054499966876,
+			"settings":
+			{
+				"buffer_size": 7027,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/F/xampp/htdocs/usa/templates/searchtool-search.tpl",
+			"settings":
+			{
+				"buffer_size": 1956,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/F/xampp/htdocs/UMA/index.php",
+			"settings":
+			{
+				"buffer_size": 26951,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/xampp/htdocs/usa/inc/report.php",
+		"/F/xampp/htdocs/usa/inc/review_ep.php",
+		"/F/xampp/htdocs/usa/templates/searchtool-search.tpl",
+		"/F/xampp/htdocs/usa/templates/match_ep.tpl",
+		"/F/xampp/htdocs/usa/inc/match_ep.php",
+		"/F/xampp/htdocs/usa/searchtool.php",
+		"/F/xampp/htdocs/usa/ziptest.php",
+		"/F/xampp/htdocs/usa/inc/bulkdownload.php",
+		"/C/Users/Mike Victor/Desktop/dbconnect.php",
+		"/C/Users/Mike Victor/Desktop/index.php",
+		"/G/mike/desktop/backups/styles/cbv2new/layout/footer.html",
+		"/F/xampp/htdocs/usa/jquery.modal.css",
+		"/G/mike/desktop/backups/includes/classes/ClipBucket.class.php",
+		"/F/xampp/htdocs/sa/join-aiesec.php",
+		"/F/xampp/htdocs/usa/jquery.modal.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"bulk",
+			"<?",
+			"tn",
+			"tb",
+			"tn_country",
+			"$tn_id",
+			"$app_stage",
+			"whoo",
+			"class",
+			"select"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/F/xampp/htdocs/usa/aieseconline2/templates/ap_step8.tpl",
+					"settings":
+					{
+						"buffer_size": 10351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1133,
+								1133
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1425.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/F/xampp/htdocs/usa/templates/ap_step8.tpl",
+					"settings":
+					{
+						"buffer_size": 9964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2566,
+								2603
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 675.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/F/xampp/htdocs/usa/searchtool.php",
+					"settings":
+					{
+						"buffer_size": 7027,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6452,
+								6456
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4891.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/F/xampp/htdocs/usa/templates/searchtool-search.tpl",
+					"settings":
+					{
+						"buffer_size": 1956,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1539,
+								1539
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/F/xampp/htdocs/UMA/index.php",
+					"settings":
+					{
+						"buffer_size": 26951,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7397,
+								7397
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2962.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 311.0,
+	"status_bar_visible": true
+}

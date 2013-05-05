@@ -36,9 +36,9 @@ else if($current_page == 'contact.php')
 
 ?>
 	<title><?php echo $title ?></title> 
-	<meta name="description" content="Smart Bootstrap Theme"/>
-	<meta name="keywords" content="Template, Theme, web, html5, css3, Bootstrap" />
-	<meta name="author" content="Łukasz Holeczek from creativeLabs"/>
+	<meta name="description" content="AIESEC South Africa"/>
+	<meta name="keywords" content="AIESEC, South Africa, leadership, international" />
+	<meta name="author" content="AIESEC South Africa"/>
 	<!-- end: Meta -->
 	
 	<!-- start: Mobile Specific -->
@@ -83,7 +83,7 @@ else if($current_page == 'contact.php')
 				<!--start: Logo -->
 				<div class="logo span4">
 						
-					<img src="img/aiesec_south_africa_logo.png" style="padding-top:13px">
+					<a href="http://aiesec.co.za"><img src="img/aiesec_south_africa_logo.png"></a>
 						
 				</div>
 				<!--end: Logo -->
