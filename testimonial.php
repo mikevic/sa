@@ -11,11 +11,7 @@
 										<div class="testimonials-bg"></div>
 										<div class="testimonials-author">Michael Hubbard, <span>LCP</span></div>
 									</li>
-									<li class="testimonial">
-										<div class="testimonials">The future belongs to those who see possibilities before they become obvious. In AIESEC I lead teams of more than 30 individuals, handled the operations of AIESEC in South Africa, interacted with the world's elite, worked at a global level and much more. I gained experience in Human Rosrouces, Marketing, Branding, Operational Strategies and Public Relations. I am an AIESECer & I wish to remain one.</div>
-										<div class="testimonials-bg"></div>
-										<div class="testimonials-author">Siddharth Bali, <span>MCVP OD</span></div>
-									</li>
+
 
 								</ul>
 
