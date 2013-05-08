@@ -2,6 +2,7 @@
 $currentFile = $_SERVER["PHP_SELF"];
 $parts = Explode('/', $currentFile);
 $current_page =  $parts[count($parts) - 1];
+require_once 'includes/dbconnect.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,3 +1,3 @@
 <?php
-$mysqli = mysqli_connect("localhost", "about_about", "Federation123", "about_about");
+$mysqli = mysqli_connect("localhost", "aiesec_sa", "Federation123", "aiesec_sa");
 ?>

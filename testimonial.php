@@ -1,3 +1,7 @@
+<?php
+require_once 'includes/dbconnect.inc.php';
+$res1 = mysqli_query($mysqli, "SELECT * from testimonials");
+?>
 <div class="testimonial-container">
 
 						<div class="title"><h3>Testimonials</h3></div>
@@ -6,12 +10,18 @@
 
 								<ul class="carousel">
 
-									<li class="testimonial">
-										<div class="testimonials">AIESEC has allowed me to meet beautiful amazing children in India, meet dozens of Africans in Mozambique, explore the power of youth in Moscow and walk the talk in Cape Town. While doing this I have learnt so much about what it means to change the world, to work in teams, to have a purpose and to want to achieve something great.</div>
-										<div class="testimonials-bg"></div>
-										<div class="testimonials-author">Michael Hubbard, <span>LCP</span></div>
-									</li>
+<?php
+while ($testimonial = mysqli_fetch_assoc($res1)) {
+?>
 
+									<li class="testimonial">
+										<div class="testimonials"><?php echo $testimonial['testimonial']; ?></div>
+										<div class="testimonials-bg"></div>
+										<div class="testimonials-author"><?php echo $testimonial['name']; ?>, <span><?php echo $testimonial['position']; ?></span></div>
+									</li>
+<?php
+}
+?>
 
 								</ul>
 

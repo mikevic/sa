@@ -170,6 +170,24 @@
 <script src="js/slider.js"></script>
 <script src="js/fancybox.js"></script>
 <script defer src="js/custom.js"></script>
+<script src="js/jquery.jqEasyCharCounter.min.js" type="text/javascript"></script>
+<?php if($current_page == 'add_testimonial.php') { ?>
+<script>
+		$(document).ready(function(){
+		$('#text_field').jqEasyCounter({
+			'maxChars': 400,
+			'maxCharsWarning': 350
+			});
+		$("#add_testimonial").submit(function(){
+		$.post('includes/add_testimonial_server.php', $("#add_testimonial").serialize(), function(data){
+			$("#result").html(data);
+		});
+
+		return false;
+	});
+		});
+	</script>
+<?php } ?>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
