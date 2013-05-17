@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"org_dura",
+				"org_duration_1"
+			],
+			[
+				"org_re",
+				"org_responsibilities_1"
+			],
+			[
+				"org_ti",
+				"org_title_1"
+			],
+			[
+				"org",
+				"org_1"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"grad",
+				"gradyear_1"
+			],
+			[
+				"univ",
+				"university_1"
+			],
+			[
+				"gra",
+				"gradyear_1"
+			],
+			[
+				"uni_dura",
+				"uni_duration_1"
+			],
+			[
+				"cou",
+				"course_1"
+			],
+			[
+				"univers",
+				"university_1"
+			],
+			[
 				"fi",
 				"first_name"
 			],
@@ -43,141 +87,27 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/F/xampp/htdocs/usa/aieseconline2/templates/index.tpl",
-			"settings":
-			{
-				"buffer_size": 2699,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/html2pdf/examples/exemple05.php",
-			"settings":
-			{
-				"buffer_size": 780,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/html2pdf/examples/exemple00.php",
-			"settings":
-			{
-				"buffer_size": 807,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/usa/aieseconline2/templates/ap_step11.tpl",
-			"settings":
-			{
-				"buffer_size": 2485,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/dompdf/dompdf_config.inc.php",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<?php\n\nrequire_once(\"../dompdf_config.inc.php\");\n\nif ( isset( $_POST[\"html\"] )) {\n\n  if ( get_magic_quotes_gpc() )\n    $_POST[\"html\"] = stripslashes($_POST[\"html\"]);\n  \n  $dompdf = new DOMPDF();\n  $dompdf->load_html($_POST[\"html\"]);\n  $dompdf->set_paper($_POST[\"paper\"], $_POST[\"orientation\"]);\n  $dompdf->render();\n\n  $dompdf->stream(\"dompdf_out.pdf\", array(\"Attachment\" => false));\n\n  exit(0);\n}\n\n?>\n<?php include(\"head.inc\"); ?>\n\n<a name=\"demo\"> </a>\n<h2>Demo</h2>\n\n<?php if ($is_local) { ?>\n\n<p>Enter your html snippet in the text box below to see it rendered as a\nPDF: (Note by default, remote stylesheets, images &amp; inline PHP are disabled.)</p>\n\n<form action=\"<?php echo $_SERVER[\"PHP_SELF\"];?>\" method=\"post\">\n<p>Paper size and orientation:\n<select name=\"paper\">\n<?php\nforeach ( array_keys(CPDF_Adapter::$PAPER_SIZES) as $size )\n  echo \"<option \". ($size == \"letter\" ? \"selected \" : \"\" ) . \"value=\\\"$size\\\">$size</option>\\n\";\n?>\n</select>\n<select name=\"orientation\">\n  <option value=\"portrait\">portrait</option>\n  <option value=\"landscape\">landscape</option>\n</select>\n</p>\n\n<textarea name=\"html\" cols=\"60\" rows=\"20\">\n&lt;html&gt;\n&lt;head&gt;\n&lt;style&gt;\n\n/* Type some style rules here */\n\n&lt;/style&gt;\n&lt;/head&gt;\n\n&lt;body&gt;\n\n&lt;!-- Type some HTML here --&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n</textarea>\n\n<div style=\"text-align: center; margin-top: 1em;\">\n  <button type=\"submit\">Download</button>\n</div>\n\n</form>",
-			"file": "/F/xampp/htdocs/dompdf/www/demo.php",
-			"file_size": 1433,
-			"file_write_time": 130122870468696799,
-			"settings":
-			{
-				"buffer_size": 1433,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n  \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<style>\nbody {\n  margin: 18pt 18pt 24pt 18pt;\n}\n\n* {\n  font-family: helvetica,georgia,serif;\n  font-weight: bold;\n}\n\np {\n  text-align: justify;\n  font-size: 1em;\n  margin: 0.5em;\n  padding: 10px;\n}\n</style>\n</head>\n<body>\n\n<script type=\"text/php\">\n\nif ( isset($pdf) ) {\n\n  $font = Font_Metrics::get_font(\"verdana\");;\n  $size = 6;\n  $color = array(0,0,0);\n  $text_height = Font_Metrics::get_font_height($font, $size);\n\n  $foot = $pdf->open_object();\n  \n  $w = $pdf->get_width();\n  $h = $pdf->get_height();\n\n  // Draw a line along the bottom\n  $y = $h - $text_height - 24;\n  $pdf->line(16, $y, $w - 16, $y, $color, 0.5);\n\n  $pdf->close_object();\n  $pdf->add_object($foot, \"all\");\n\n  $text = \"Page {PAGE_NUM} of {PAGE_COUNT}\";  \n\n  // Center the text\n  $width = Font_Metrics::get_text_width(\"Page 1 of 2\", $font, $size);\n  $pdf->page_text($w / 2 - $width / 2, $y, $text, $font, $size, $color);\n  \n}\n</script>\n\n<h1>Lorem ipsum dolor sit amet</h1>\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec at\nodio vitae libero tempus convallis. Cum sociis natoque penatibus et\nmagnis dis parturient montes, nascetur ridiculus mus. Vestibulum purus\nmauris, dapibus eu, sagittis quis, sagittis quis, mi. Morbi fringilla\nmassa quis velit. Curabitur metus massa, semper mollis, molestie vel,\nadipiscing nec, massa. Phasellus vitae felis sed lectus dapibus\nfacilisis. In ultrices sagittis ipsum. In at est. Integer iaculis\nturpis vel magna. Cras eu est. Integer porttitor ligula a\ntellus. Curabitur accumsan ipsum a velit. Sed laoreet lectus quis\nleo. Nulla pellentesque molestie ante. Quisque vestibulum est id\njusto. Ut pellentesque ante in neque.</p>\n\n<p>Curabitur ut diam eu dui vestibulum pharetra. Nam pellentesque, justo\nnon hendrerit venenatis, mi orci pretium mi, et vehicula leo arcu quis\ndiam. Nullam mattis laoreet quam. Morbi mollis sem ut tellus. Nam mi\nmassa, lobortis eu, sollicitudin et, iaculis et, massa. Maecenas purus\nmauris, luctus sit amet, pharetra in, facilisis sit amet, elit. Nullam\nvel erat tempus purus molestie suscipit. Vestibulum odio lorem,\nsollicitudin non, volutpat sit amet, tincidunt vel, nunc. Nulla quis\nante vestibulum odio feugiat facilisis. Proin lorem nisl, viverra at,\nrhoncus quis, semper nec, mi. Donec euismod enim vitae velit. Nulla\nsed lectus. Vivamus placerat, lacus sed vehicula sagittis, arcu massa\nadipiscing lorem, bibendum luctus nisl tortor vitae leo.</p>\n\n<p>Etiam a mauris. Proin justo elit, accumsan sit amet, tempus et,\nblandit id, tellus. Morbi varius, nisi id iaculis aliquam, lacus\nligula facilisis velit, ac pharetra ipsum augue a massa. Etiam rhoncus\ncommodo orci. Mauris ullamcorper sagittis turpis. Nullam magna libero,\nsagittis sed, auctor faucibus, accumsan vitae, urna. Pellentesque\nvolutpat. Aliquam sapien ipsum, eleifend nec, imperdiet vitae,\nconsectetuer id, quam. Donec a urna. Suspendisse sit amet\nvelit. Curabitur quis nisi id dui viverra ornare. Sed condimentum enim\nquis tortor. Ut condimentum, magna non tempus tincidunt, leo nibh\nmolestie tellus, vitae convallis dolor ante sed ante. Nunc et\nmetus. Phasellus ultricies. Fusce faucibus tortor sit amet mauris.</p>\n\n<p>Aliquam enim. Duis et diam. Praesent porta, mauris quis pellentesque\nvolutpat, erat elit vulputate eros, vitae pulvinar augue velit sit\namet sem. Fusce eu urna eu nisi condimentum posuere. Vivamus sed\nfelis. Duis eget urna vitae eros interdum dignissim. Proin justo eros,\neleifend in, porttitor in, malesuada non, neque. Etiam sed\naugue. Nulla sit amet magna. Lorem ipsum dolor sit amet, consectetuer\nadipiscing elit. Mauris facilisis. Curabitur massa magna, pulvinar a,\nnonummy eget, egestas vitae, mauris. Quisque vel elit sit amet lorem\nmalesuada facilisis. Vestibulum porta, metus sit amet egestas\ninterdum, urna justo euismod erat, id tristique urna leo quis\nnibh. Morbi non erat.</p>\n\n<p>Cras fringilla, nulla id egestas elementum, augue nunc iaculis nibh,\nac adipiscing nibh justo id tortor. Donec vel orci a nisi ultricies\naliquet. Nunc urna quam, adipiscing molestie, vehicula non,\ncondimentum non, magna. Integer magna. Donec quam metus, pulvinar id,\nsuscipit eget, euismod ac, orci. Nulla facilisi. Nullam nec\nmauris. Morbi in mi. Etiam urna lectus, pulvinar ac, sollicitudin eu,\neuismod ac, lectus. Fusce elit. Sed ultricies odio ac felis.</p>\n\n<h1>Cras iaculis. Nulla facilisi.</h1>\n<p>Cras iaculis. Nulla facilisi. Fusce vitae arcu. Integer lectus mauris,\nornare vel, accumsan eget, scelerisque vel, nunc. Maecenas justo urna,\nvolutpat vel, vehicula vel, ullamcorper nec, odio. Suspendisse laoreet\nnisi sed erat. Cras convallis sollicitudin sapien. Phasellus ac erat\neu mi rutrum rhoncus. Morbi et velit. Morbi odio nisi, pharetra eget,\nsollicitudin sed, aliquam at, nisl. Quisque euismod diam in\nsapien. Integer accumsan urna in risus.</p>\n\n<p>Proin sit amet nisl. Phasellus dui ipsum, laoreet a, pulvinar id,\nfringilla ut, libero. In hac habitasse platea dictumst. Maecenas mi\nmagna, cursus sed, rutrum eget, molestie nec, dui. Suspendisse\nlacus. Vivamus nibh urna, accumsan sit amet, gravida sed, convallis a,\nleo. Cras sollicitudin orci sit amet eros. Pellentesque eu odio et\nvelit tempor dignissim. Morbi vehicula malesuada enim. Pellentesque\ntincidunt, tellus ac fringilla tempor, justo libero interdum nunc, eu\nsollicitudin tortor augue nec tellus. Nullam eget leo quis tellus\ngravida faucibus. Nam gravida. Curabitur rhoncus egestas\nnunc. Curabitur mollis, nisi sed suscipit gravida, enim felis interdum\njusto, vel accumsan magna nunc ut libero. Ut fermentum. Fusce luctus,\nest sit amet feugiat lobortis, nisl eros bibendum libero, ut suscipit\nfelis ligula in massa. Proin congue elit et nisi. Cras ac nisl. Nunc\nullamcorper neque vel diam.</p>\n\n<h1>Ut pellentesque arcu ac lectus.</h1>\n<p>Sed ac lorem. Ut pellentesque arcu ac lectus. Cum sociis natoque\npenatibus et magnis dis parturient montes, nascetur ridiculus\nmus. Pellentesque ultrices metus sollicitudin pede. Donec fermentum\nest a velit fringilla mollis. Duis ligula. Fusce viverra laoreet\nodio. Suspendisse sit amet ligula. Maecenas nunc velit, sagittis eu,\nbibendum eu, placerat at, nibh. Praesent ut erat eget nisi gravida\nimperdiet. Quisque vitae sapien. Ut eros.</p>\n\n<p>Donec eros ligula, dignissim vel, ultricies id, mattis in, massa. Duis\nlobortis dui nec orci. Sed ullamcorper metus non massa. Aliquam eget\nmauris ac nulla elementum posuere. Sed porta, augue vitae rhoncus\naliquet, felis quam eleifend est, vitae rutrum metus arcu vel\nlorem. Proin laoreet, mauris sit amet aliquet eleifend, nisl sem\nmolestie nisi, eu varius eros ligula non erat. Integer ac\nsem. Suspendisse lectus. Aliquam erat volutpat. Fusce sit amet leo\nfaucibus erat molestie ultrices. Maecenas lacinia lectus eget\ndui. Etiam porta porttitor ante. Phasellus sit amet lacus adipiscing\nenim mollis iaculis. Fusce congue, nulla a commodo aliquam, erat dui\nfermentum dui, pellentesque faucibus orci enim at mauris. Pellentesque\na diam porta magna tempor posuere. Donec lorem.</p>\n\n<p>Sed viverra aliquam turpis. Aliquam lacus. Duis id massa. Nullam\nante. Suspendisse condimentum. Donec adipiscing, felis vel semper\nsollicitudin, lacus justo pretium est, sed blandit pede risus eu\nante. Praesent ante nulla, fringilla id, ultrices et, feugiat a,\nmetus. Proin ac velit a metus suscipit fermentum. Integer aliquet. Sed\nsapien nulla, placerat at, rutrum at, condimentum quis, libero. In\naccumsan, tellus nec tincidunt malesuada, pede arcu commodo ipsum, ac\nmattis tortor urna vitae enim. Aenean nonummy, mauris eget commodo\nbibendum, augue sem ultrices nunc, eget rhoncus metus erat placerat\nlectus. Aliquam mollis lectus in justo. Vivamus iaculis lacus sit amet\nligula. Etiam consectetuer convallis diam. Curabitur sollicitudin,\nfelis eu vehicula scelerisque, nisl urna aliquam orci, sit amet\nlaoreet mi turpis id ligula. Donec at enim non nulla adipiscing\ndapibus. Aenean nisl.</p>\n\n<p>Ut in lacus nec enim volutpat pellentesque. Integer euismod. In odio\neros, malesuada in, mattis vel, tempor nec, sem. In libero tellus,\nvarius vitae, bibendum in, elementum quis, nisl. Duis tortor. Etiam at\njusto. Pellentesque facilisis mauris non nunc. Praesent eros mi,\ndapibus eget, placerat ac, lobortis quis, sem. Nulla rhoncus\nturpis. Nulla vitae mi. Proin id massa. Nunc eros.</p>\n\n<h1>Aliquam molestie pulvinar ligula.</h1>\n<p>Vestibulum dui risus, varius ut, semper et, consequat ultrices,\nfelis. Pellentesque iaculis urna in velit. Ut pharetra. Nunc\nfringilla, nisi vitae fringilla placerat, enim justo semper erat,\nmollis feugiat leo neque eu sem. Vestibulum orci urna, suscipit a,\naccumsan nec, fringilla in, risus. Nullam ante. Nullam nec\neros. Nullam varius. Nulla facilisi. In auctor libero in\nmetus. Aliquam porttitor congue eros. Nulla facilisi. Mauris euismod\nturpis ut felis. Ut nunc nisl, cursus quis, eleifend at, viverra\nbibendum, lacus. Donec consequat lacus eu sapien. Fusce pulvinar\nlectus quis nunc. In hac habitasse platea dictumst.</p>\n\n<p>Aliquam molestie pulvinar ligula. Maecenas imperdiet, urna eget\nultrices adipiscing, nibh ante elementum neque, id molestie massa quam\nut nunc. Nullam porta. Phasellus a magna in sem volutpat\nviverra. Quisque aliquet nunc ac turpis. Mauris dolor enim, viverra\nrutrum, placerat et, laoreet et, justo. In id nulla. Donec\nerat. Phasellus nec mi sed velit mollis cursus. Vestibulum\ntincidunt. Praesent dui libero, facilisis eu, vulputate eget, aliquet\nnec, ipsum. Pellentesque in nisl in mauris pretium euismod.</p>\n\n</body> </html>\n",
-			"file": "/F/xampp/htdocs/dompdf/www/test/page_pages.html",
-			"file_size": 9686,
-			"file_write_time": 130083286280000000,
-			"settings":
-			{
-				"buffer_size": 9686,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/usa/aieseconline2/inc/contract.php",
-			"settings":
-			{
-				"buffer_size": 233,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/usa/aieseconline2/session.php",
-			"settings":
-			{
-				"buffer_size": 1378,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/usa/aieseconline2/templates/ap_step1.tpl",
-			"settings":
-			{
-				"buffer_size": 12249,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/usa/aieseconline2/inc/print_contract.php",
-			"settings":
-			{
-				"buffer_size": 402,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/usa/aieseconline2/inc/generate_contract.php",
-			"settings":
-			{
-				"buffer_size": 11087,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/usa/aieseconline2/inc/ap_steps.php",
-			"settings":
-			{
-				"buffer_size": 34132,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/usa/aieseconline2/templates/ap_step9.tpl",
-			"settings":
-			{
-				"buffer_size": 18389,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/F/xampp/htdocs/usa/aieseconline2/templates/ap_step16.tpl",
-			"settings":
-			{
-				"buffer_size": 3826,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			]
 		],
-		"width": 0.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -194,10 +124,31 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Mike Victor/Desktop/node/test.js",
+		"/F/xampp/htdocs/usa/aieseconline2/inc/ap_steps.php",
 		"/F/xampp/htdocs/usa/aieseconline2/inc/generate_contract.php",
+		"/F/xampp/htdocs/usa/aieseconline2/inc/print_contract.php",
+		"/F/xampp/htdocs/usa/aieseconline2/templates/ap_step1.tpl",
+		"/F/xampp/htdocs/usa/aieseconline2/session.php",
+		"/F/xampp/htdocs/usa/aieseconline2/inc/contract.php",
+		"/F/xampp/htdocs/dompdf/www/test/page_pages.html",
+		"/F/xampp/htdocs/dompdf/dompdf_config.inc.php",
+		"/F/xampp/htdocs/usa/aieseconline2/templates/ap_step11.tpl",
+		"/F/xampp/htdocs/html2pdf/examples/exemple00.php",
+		"/F/xampp/htdocs/html2pdf/examples/exemple05.php",
+		"/F/xampp/htdocs/usa/aieseconline2/templates/index.tpl",
+		"/C/Users/Mike Victor/Desktop/test.ppk",
+		"/F/xampp/htdocs/dompdf/www/demo.php",
+		"/C/Users/Mike Victor/Desktop/php.ini",
+		"/C/Users/Mike Victor/Desktop/index.php",
+		"/C/Users/Mike Victor/Desktop/.htaccess",
+		"/C/Users/Mike Victor/Desktop/error_log",
+		"/C/Users/Mike Victor/Desktop/media.php",
+		"/F/xampp/htdocs/usa/inc/ap_steps.php",
+		"/F/xampp/htdocs/usa/aieseconline2/templates/ap_step16.tpl",
+		"/F/xampp/htdocs/usa/aieseconline2/templates/ap_step9.tpl",
 		"/F/xampp/htdocs/usa/aieseconline2/templates/contract.tpl",
 		"/F/xampp/htdocs/usa/aieseconline2/navbar.php",
-		"/F/xampp/htdocs/usa/inc/ap_steps.php",
 		"/F/xampp/htdocs/usa/aieseconline2/test.php",
 		"/F/xampp/htdocs/sa/header.php",
 		"/F/xampp/htdocs/html2pdf/examples/res/exemple00.php",
@@ -215,7 +166,6 @@
 		"/F/xampp/htdocs/usa/ziptest.php",
 		"/F/xampp/htdocs/usa/inc/bulkdownload.php",
 		"/C/Users/Mike Victor/Desktop/dbconnect.php",
-		"/C/Users/Mike Victor/Desktop/index.php",
 		"/G/mike/desktop/backups/styles/cbv2new/layout/footer.html",
 		"/F/xampp/htdocs/usa/jquery.modal.css",
 		"/G/mike/desktop/backups/includes/classes/ClipBucket.class.php",
@@ -238,6 +188,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"user_id",
+			"$user_id",
 			"agree",
 			"Agreed",
 			"php",
@@ -270,419 +222,8 @@
 	"groups":
 	[
 		{
-			"selected": 12,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/F/xampp/htdocs/usa/aieseconline2/templates/index.tpl",
-					"settings":
-					{
-						"buffer_size": 2699,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								804,
-								804
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/F/xampp/htdocs/html2pdf/examples/exemple05.php",
-					"settings":
-					{
-						"buffer_size": 780,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/F/xampp/htdocs/html2pdf/examples/exemple00.php",
-					"settings":
-					{
-						"buffer_size": 807,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 120.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/F/xampp/htdocs/usa/aieseconline2/templates/ap_step11.tpl",
-					"settings":
-					{
-						"buffer_size": 2485,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/F/xampp/htdocs/dompdf/dompdf_config.inc.php",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 6341.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/F/xampp/htdocs/dompdf/www/demo.php",
-					"settings":
-					{
-						"buffer_size": 1433,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								395,
-								297
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/F/xampp/htdocs/dompdf/www/test/page_pages.html",
-					"settings":
-					{
-						"buffer_size": 9686,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 300.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/F/xampp/htdocs/usa/aieseconline2/inc/contract.php",
-					"settings":
-					{
-						"buffer_size": 233,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								229,
-								127
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/F/xampp/htdocs/usa/aieseconline2/session.php",
-					"settings":
-					{
-						"buffer_size": 1378,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1254,
-								1232
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 400.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/F/xampp/htdocs/usa/aieseconline2/templates/ap_step1.tpl",
-					"settings":
-					{
-						"buffer_size": 12249,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11505,
-								11723
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2790.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/F/xampp/htdocs/usa/aieseconline2/inc/print_contract.php",
-					"settings":
-					{
-						"buffer_size": 402,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								252,
-								252
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/F/xampp/htdocs/usa/aieseconline2/inc/generate_contract.php",
-					"settings":
-					{
-						"buffer_size": 11087,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								311,
-								311
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1540.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "/F/xampp/htdocs/usa/aieseconline2/inc/ap_steps.php",
-					"settings":
-					{
-						"buffer_size": 34132,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								15,
-								15
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "/F/xampp/htdocs/usa/aieseconline2/templates/ap_step9.tpl",
-					"settings":
-					{
-						"buffer_size": 18389,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "/F/xampp/htdocs/usa/aieseconline2/templates/ap_step16.tpl",
-					"settings":
-					{
-						"buffer_size": 3826,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								493,
-								493
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -717,6 +258,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 0.0
+	},
 	"replace":
 	{
 		"height": 0.0
@@ -742,6 +287,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 311.0,
+	"side_bar_width": 217.0,
 	"status_bar_visible": true
 }

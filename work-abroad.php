@@ -23,7 +23,6 @@ require 'header.php';
 							<li class="active" style=""><a href="#tab1"><i class="mini-ico-search"></i>Process</a></li>
 							<li class=""><a href="#tab2"><i class="mini-ico-shopping-cart"></i>Costs</a></li>
 							<li class=""><a href="#tab3"><i class="mini-ico-time"></i>Timeline</a></li>
-							<li class=""><a href="#tab4"><i class="mini-ico-remove"></i>Warnings</a></li>
 						</ul>
 
 						<div class="tabs-container">
@@ -54,11 +53,7 @@ require 'header.php';
 							</div>
 							<div class="tab-content" id="tab3" style="display: none;">
 								Our peak periods are June and December as these are the university holidays. However AIESEC has internships available all year long and you are free to start whenever you are ready, dependent on the internship start date of course. Generally we would interview you at least 3 months before the internship starts, allowing sufficient time for your first payment after which we would match you, so that you are matched a minimum of 6 weeks, preferably 2 months before the internship start date. This is when you buy your flight tickets and arrange your visa and make your second payment.							
-							</div>
-							<div class="tab-content" id="tab4" style="display: none;">
-								<p>These are student internships. You will probably be staying with lots of other interns (don’t worry, they’re great people and will often become your life-long friends!). You may have to sleep on a mattress on the floor. You may find the food is too spicy, too meaty, too dog-like. Be prepared for this. You are going to a foreign country. Customs will be different. Food will be different. We will help to prepare you, you should do some reading and be ready for this.</p>
-								<p>But don’t be scared. All of this is ultimately a great experience. Trust us, many of us have been on an internship ourselves and loved it.</p>
-							</div>							
+							</div>						
 						</div>
                     </div>
                     <p>Now that you have all the details, fill up this form to apply!</p>

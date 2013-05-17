@@ -34,6 +34,10 @@ else if($current_page == 'contact.php')
 {
 	$title = "Contact Us";
 }
+else if($current_page == 'work-abroad.php')
+{
+	$title = "Work Abroad";
+}
 
 ?>
 	<title><?php echo $title ?></title> 
@@ -108,7 +112,8 @@ else if($current_page == 'contact.php')
 											<li><a href="about-aiesec.php">About AIESEC</a></li>
                                             <li><a href="about-aiesec-south-africa.php">About AIESEC South Africa</a></li>
 			                			</ul>
-			              			</li>							
+			              			</li>	
+			              			<li <?php if($current_page == 'work-abroad.php'){echo 'class="active"';} ?>><a href="work-abroad.php">Work Abroad</a></li>						
 			              			<li <?php if($current_page == 'join-aiesec.php'){echo 'class="active"';} ?>><a href="join-aiesec.php">Join AIESEC</a></li>
 			              			<li <?php if($current_page == 'contact.php'){echo 'class="active"';} ?>><a href="contact.php">Contact Us</a></li>
 			            		</ul>

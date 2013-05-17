@@ -77,7 +77,8 @@
 											<li><a href="about-aiesec.php">About AIESEC</a></li>
                                             <li><a href="about-aiesec-south-africa.php">About AIESEC South Africa</a></li>
 			                			</ul>
-			              			</li>							
+			              			</li>
+			              			<li><a href="work-abroad.php">Work Abroad</a></li>							
 			              			<li><a href="join-aiesec.php">Join AIESEC</a></li>
 			              			<li><a href="contact.php">Contact Us</a></li>
 			            		</ul>
