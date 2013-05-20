@@ -5,9 +5,9 @@
 	<!-- start: Meta -->
 	<meta charset="utf-8">
 	<title>AIESEC South Africa</title> 
-	<meta name="description" content="Smart Bootstrap Theme"/>
-	<meta name="keywords" content="Template, Theme, web, html5, css3, Bootstrap" />
-	<meta name="author" content="Łukasz Holeczek from creativeLabs"/>
+	<meta name="description" content="AIESEC South Africa"/>
+	<meta name="keywords" content="AIESEC, South Africa, leadership, international" />
+	<meta name="author" content="AIESEC South Africa"/>
 	<!-- end: Meta -->
 	
 	<!-- start: Mobile Specific -->
@@ -256,19 +256,18 @@
 			<!-- start: Row -->
       		<div class="row">
 	
-				<div class="span9">
+				<div class="span12">
 					
 					<div class="title"><h3>AIESEC Programmes</h3></div>
 					
 					<!-- start: Row -->
 		      		<div class="row">
 			
-						<div class="span3">
+						<div class="span4">
 	
 							<div class="picture">
-								<a href="" rel="image" title="mobile app">
-									<img src="img/car.jpg" >
-									<div class="image-overlay-zoom"></div>
+								<a href="work-abroad.php" title="Work Abroad">
+									<img src="img/gcdp.jpg" >
 								</a>
 							</div>
 							<div class="item-description">
@@ -279,12 +278,11 @@ Cultural education, HIV/AIDs, community development or corporate social responsi
 					
         				</div>
 					
-						<div class="span3">
+						<div class="span4">
 
 							<div class="picture">
-								<a href="">
-									<img src="img/web_app1.jpg">
-									<div class="image-overlay-link"></div>
+								<a href="work-abroad.php" title="Work Abroad">
+									<img src="img/gip.jpg">
 								</a>
 							</div>
 							<div class="item-description">
@@ -294,12 +292,11 @@ Cultural education, HIV/AIDs, community development or corporate social responsi
 
 		        		</div>
 
-						<div class="span3">
+						<div class="span4">
 
 							<div class="picture">
-								<a href="join-aiesec.php" rel="image" title="mobile app">
-									<img src="img/mobile_app1.jpg">
-									<div class="image-overlay-zoom"></div>
+								<a href="join-aiesec.php" title="Join AIESEC">
+									<img src="img/join-aiesec.jpg">
 								</a>
 							</div>
 							<div class="item-description">

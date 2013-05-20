@@ -531,7 +531,7 @@ html[xmlns] .slides {display: block;}
 =================================================================== */
 .slide-caption {
 	width: auto;
-	max-width: 40%;
+	max-width: 50%;
 	padding: 10px 20px;
 	margin: 0 0 0px 0px;
 	position: absolute;
@@ -549,14 +549,14 @@ html[xmlns] .slides {display: block;}
 	
 .slide-caption h3 {
 	color: #fff;
-	font-size: 18px;
+	font-size: 20px;
 	margin:0;
 	line-height: 33px;
 }
 	
 .slide-caption p {
 	margin:0;
-	line-height: 19px;
+	line-height: 20px;
 	color: #bbb;
 }
 

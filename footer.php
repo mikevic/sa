@@ -72,12 +72,15 @@
 
 				<!-- start: Photo Stream -->
 				<div class="span3">
-					
-					<h3>Photo Stream</h3>
-					<div class="flickr-widget">
-							<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&display=latest&size=s&layout=x&source=user&user=83871184@N05"></script>
-						<div class="clear"></div>
-					</div>
+					<!-- start: Newsletter -->
+					<form action="http://aiesec.us7.list-manage1.com/subscribe/post?u=f379b5270d06877c5b7842ad8&amp;id=279bd5a028" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<h3>Newsletter</h3>
+						<p>Please leave us your email</p>
+						<label for="newsletter_input">@:</label>
+						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+					</form>
+					<!-- end: Newsletter -->
 					
 				</div>
 				<!-- end: Photo Stream -->
@@ -118,15 +121,7 @@
 					</ul>
 					<!-- end: Follow Us -->
 				
-					<!-- start: Newsletter -->
-					<form id="newsletter">
-						<h3>Newsletter</h3>
-						<p>Please leave us your email</p>
-						<label for="newsletter_input">@:</label>
-						<input type="text" id="newsletter_input"/>
-						<input type="submit" id="newsletter_submit" value="submit">
-					</form>
-					<!-- end: Newsletter -->
+
 				
 				</div>
 				
